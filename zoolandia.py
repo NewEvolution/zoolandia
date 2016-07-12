@@ -26,6 +26,7 @@ class Flying:
 
 class Swimming:
     def __init__(self):
+        self.swim_speed = 0
         self.fins = False
         self.flippers = False
         self.web_feet = False
