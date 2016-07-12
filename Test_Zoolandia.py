@@ -11,6 +11,7 @@ class TestAnimal(unittest.TestCase):
         a_animal = zoolandia.Betta('orange', 'Bob')
         self.assertEqual(a_animal.name, 'Bob')
         self.assertEqual(a_animal.species.color, 'orange')
+        self.assertIsInstance(bob, zoolandia.Animal)
         self.assertIsInstance(a_animal.species, zoolandia.BettaTrifasciata)
 
 class TestSpecies(unittest.TestCase):
