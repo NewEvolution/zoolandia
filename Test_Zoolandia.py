@@ -35,7 +35,7 @@ class TestHabitat(unittest.TestCase):
         habitat = zoolandia.Habitat()
         self.assertIsInstance(habitat.members, set)
 
-class TestWalking(self):
+class TestWalking:
 
     def test_legs_zero_default(self):
         walking = zoolandia.Walking()
