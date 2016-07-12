@@ -27,6 +27,7 @@ class Habitat:
 
 class Aquarium(Habitat):
     def __init__(self, water_type):
+        Habitat.__init__(self)
         self.water_type = water_type
 
 class Walking:
