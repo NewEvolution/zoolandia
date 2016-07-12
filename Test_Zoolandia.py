@@ -41,9 +41,35 @@ class TestWalking:
         walking = zoolandia.Walking()
         self.assertEqual(walking.legs, 0)
 
-    def test_walk_speed_zero(self):
+    def test_walk_speed_zero_default(self):
         walking = zoolandia.Walking()
         self.assertEqual(walking.speed, 0)
+
+class TestSwimming:
+
+    def test_appendages_zero_default(self):
+        swiming = zoolandia.Swiming()
+        self.assertEqual(swimming.fins, False)
+        self.assertEqual(swimming.flippers, False)
+        self.assertEqual(swimming.web_feet, False)
+
+    def test_swim_speed_zero_default(self):
+        swimming = zoolandia.Swimming()
+        self.assertEqual(swimming.swim_speed, 0)
+
+class TestFlying:
+
+    def test_wings_zero_default(self):
+        flying = zoolandia.Flying()
+        self.assertEqual(flying.wings, 0)
+
+    def test_wingspan_zero_default(self):
+        flying = zoolandia.Flying()
+        self.assertEqual(flying.wing_span, 0)
+
+    def test_walk_speed_zero_default(self):
+        flying = zoolandia.Flying()
+        self.assertEqual(flying.air_speed, 0)
 
 if __name__ == '__main__':
     unittest.main()
