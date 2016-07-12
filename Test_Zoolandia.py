@@ -8,10 +8,10 @@ class TestAnimal(unittest.TestCase):
         pass
 
     def test_animal_creation(self):
-        betta = zoolandia.Betta('Orange')
-        a_animal = zoolandia.Animal('Bob', betta)
+        a_animal = zoolandia.Betta('orange', 'Bob')
         self.assertEqual(a_animal.name, 'Bob')
-        self.assertIsInstance(a_animal.species, zoolandia.Betta)
+        self.assertEqual(a_animal.species.color, 'orange')
+        self.assertIsInstance(a_animal.species, zoolandia.BettaTrifasciata)
 
 class TestSpecies(unittest.TestCase):
 
