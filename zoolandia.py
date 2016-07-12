@@ -7,3 +7,8 @@ class Species:
     def __init__(self):
         self.commonname = ''
         self.georegion = ''
+
+class Habitat:
+    def __init__(self):
+        self.name = ''
+        self.members = set()
