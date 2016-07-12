@@ -8,11 +8,11 @@ class TestAnimal(unittest.TestCase):
         pass
 
     def test_animal_creation(self):
-        a_animal = zoolandia.Betta('orange', 'Bob')
-        self.assertEqual(a_animal.name, 'Bob')
-        self.assertEqual(a_animal.species.color, 'orange')
+        bob = zoolandia.Betta('orange', 'Bob')
+        self.assertEqual(bob.name, 'Bob')
+        self.assertEqual(bob.species.color, 'orange')
         self.assertIsInstance(bob, zoolandia.Animal)
-        self.assertIsInstance(a_animal.species, zoolandia.BettaTrifasciata)
+        self.assertIsInstance(bob.species, zoolandia.BettaTrifasciata)
 
 class TestSpecies(unittest.TestCase):
 
@@ -33,6 +33,12 @@ class TestHabitat(unittest.TestCase):
     def test_members_set_default(self):
         habitat = zoolandia.Habitat()
         self.assertIsInstance(habitat.members, set)
+
+    def test_add_member(self):
+        aquarium = zoolandia.Aquarium('fresh')
+        bob = zoolandia.Betta('orange', 'Bob')
+        aquarium.add_member(bob)
+        self.assertIn(bob, aquarium.members)
 
 class TestWalking(unittest.TestCase):
 
