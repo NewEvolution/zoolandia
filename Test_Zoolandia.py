@@ -43,12 +43,12 @@ class TestWalking(unittest.TestCase):
 
     def test_walk_speed_zero_default(self):
         walking = zoolandia.Walking()
-        self.assertEqual(walking.speed, 0)
+        self.assertEqual(walking.walk_speed, 0)
 
 class TestSwimming(unittest.TestCase):
 
     def test_appendages_zero_default(self):
-        swiming = zoolandia.Swiming()
+        swimming = zoolandia.Swimming()
         self.assertFalse(swimming.fins)
         self.assertFalse(swimming.flippers)
         self.assertFalse(swimming.web_feet)
