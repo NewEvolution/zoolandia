@@ -8,9 +8,14 @@ class Species:
         self.common_name = ''
         self.geo_region = ''
 
-class Betta(Species):
+class BettaTrifasciata(Species):
     def __init__(self, color):
         self.color = color
+        self.common_name = 'Betta'
+
+class Betta(Animal):
+    def __init__(self, color, name):
+        Animal.__init__(self, name, BettaTrifasciata(color))
 
 class Habitat:
     def __init__(self):
