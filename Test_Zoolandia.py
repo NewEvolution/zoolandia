@@ -7,13 +7,11 @@ class TestAnimal(unittest.TestCase):
     def setUpClass(self):
         pass
 
-    def test_name_emtpy_string_default(self):
-        animal = zoolandia.Animal()
-        self.assertEqual(animal.name, '')
-
-    def test_species_emtpy_string_default(self):
-        animal = zoolandia.Animal()
-        self.assertEqual(animal.species, '')
+    def test_animal_creation(self):
+        betta = zoolandia.Betta('Orange')
+        a_animal = zoolandia.Animal('Bob', betta)
+        self.assertEqual(a_animal.name, 'Bob')
+        self.assertIsInstance(a_animal.species, zoolandia.Betta)
 
 class TestSpecies(unittest.TestCase):
 
