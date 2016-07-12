@@ -35,7 +35,7 @@ class TestHabitat(unittest.TestCase):
         habitat = zoolandia.Habitat()
         self.assertIsInstance(habitat.members, set)
 
-class TestWalking:
+class TestWalking(unittest.TestCase):
 
     def test_legs_zero_default(self):
         walking = zoolandia.Walking()
@@ -45,7 +45,7 @@ class TestWalking:
         walking = zoolandia.Walking()
         self.assertEqual(walking.speed, 0)
 
-class TestSwimming:
+class TestSwimming(unittest.TestCase):
 
     def test_appendages_zero_default(self):
         swiming = zoolandia.Swiming()
@@ -57,7 +57,7 @@ class TestSwimming:
         swimming = zoolandia.Swimming()
         self.assertEqual(swimming.swim_speed, 0)
 
-class TestFlying:
+class TestFlying(unittest.TestCase):
 
     def test_wings_zero_default(self):
         flying = zoolandia.Flying()
