@@ -1,12 +1,16 @@
 class Animal:
-    def __init__(self):
-        self.species = ''
-        self.name = ''
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
 
 class Species:
     def __init__(self):
         self.common_name = ''
         self.geo_region = ''
+
+class Betta(Species):
+    def __init__(self, color):
+        self.color = color
 
 class Habitat:
     def __init__(self):
