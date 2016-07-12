@@ -7,6 +7,14 @@ class TestAnimal(unittest.TestCase):
     def setUpClass(self):
         pass
 
+    def test_name_emtpy_string_default(self):
+        animal = zoolandia.Animal()
+        self.assertEqual(animal.name, '')
+
+    def test_species_emtpy_string_default(self):
+        animal = zoolandia.Animal()
+        self.assertEqual(animal.species, '')
+
 class TestSpecies(unittest.TestCase):
 
     def test_commonname_emtpy_string_default(self):
@@ -25,7 +33,7 @@ class TestHabitat(unittest.TestCase):
 
     def test_members_set_default(self):
         habitat = zoolandia.Habitat()
-        self.assertInstance(habitat.members, set())
+        self.assertInstance(habitat.members, set)
 
 if __name__ == '__main__':
     unittest.main()
