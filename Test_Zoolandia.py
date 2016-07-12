@@ -33,7 +33,7 @@ class TestHabitat(unittest.TestCase):
 
     def test_members_set_default(self):
         habitat = zoolandia.Habitat()
-        self.assertInstance(habitat.members, set)
+        self.assertIsInstance(habitat.members, set)
 
 if __name__ == '__main__':
     unittest.main()

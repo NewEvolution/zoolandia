@@ -1,12 +1,12 @@
 class Animal:
     def __init__(self):
-        self.species = None
+        self.species = ''
         self.name = ''
 
 class Species:
     def __init__(self):
-        self.commonname = ''
-        self.georegion = ''
+        self.common_name = ''
+        self.geo_region = ''
 
 class Habitat:
     def __init__(self):
