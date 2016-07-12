@@ -37,8 +37,22 @@ class TestHabitat(unittest.TestCase):
     def test_add_member(self):
         aquarium = zoolandia.Aquarium('fresh')
         bob = zoolandia.Betta('orange', 'Bob')
+        james = zoolandia.Betta('blue', 'James')
+
         aquarium.add_member(bob)
         self.assertIn(bob, aquarium.members)
+
+        aquarium.add_member(james)
+        self.assertIn(bob, aquarium.members)
+        self.assertIn(james, aquarium.members)
+
+    def test_remove_member(self):
+        aquarium = zoolandia.Aquarium('fresh')
+        james = zoolandia.Betta('blue', 'James')
+
+        aquarium.add_member(james)
+        aquarium.remove_member(james)
+        self.assertNotIn(james, aquarium.members)
 
 class TestWalking(unittest.TestCase):
 
