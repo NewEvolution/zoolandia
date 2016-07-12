@@ -49,9 +49,9 @@ class TestSwimming(unittest.TestCase):
 
     def test_appendages_zero_default(self):
         swiming = zoolandia.Swiming()
-        self.assertEqual(swimming.fins, False)
-        self.assertEqual(swimming.flippers, False)
-        self.assertEqual(swimming.web_feet, False)
+        self.assertFalse(swimming.fins)
+        self.assertFalse(swimming.flippers)
+        self.assertFalse(swimming.web_feet)
 
     def test_swim_speed_zero_default(self):
         swimming = zoolandia.Swimming()
