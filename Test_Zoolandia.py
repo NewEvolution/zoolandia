@@ -41,9 +41,9 @@ class TestWalking(self):
         walking = zoolandia.Walking()
         self.assertEqual(walking.legs, 0)
 
-   def test_walk_speed_zero(self):
-       walking = zoolandia.Walking()
-       self.assertEqual(walking.speed, 0)
+    def test_walk_speed_zero(self):
+        walking = zoolandia.Walking()
+        self.assertEqual(walking.speed, 0)
 
 if __name__ == '__main__':
     unittest.main()
